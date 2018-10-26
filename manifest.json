@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+  
+    "name": "MathDownload",
+  
+    "description": "用于下载网页文献中的公式",
+  
+    "version": "1.0",
+
+    "permissions": [
+        "tab",
+        "storage"
+      ],
+
+    "content_scripts": [{
+        "matches" : ["http://*/*", "https://*/*"],
+        "js": ["./js/backend.js"]
+    }],
+
+    "browser_action": {
+  
+      "default_icon": "icon.png",
+  
+      "default_title": "公式下载",
+  
+      "default_popup": "popup.html"
+    }
+  }
